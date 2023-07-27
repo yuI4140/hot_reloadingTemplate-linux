@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 void* loadLib(cstr path) {
+    system("./build/buildLib.sh");
     void* library_handle = dlopen(path, RTLD_NOW);
     if (library_handle == NULL) {
         fprintf(stderr, "Error to load lib %s: %s\n", path, dlerror());

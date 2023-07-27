@@ -1,6 +1,10 @@
 #include "../headers/loader.h"
 #include <stdio.h>
+#include <unistd.h>
 #define LIB_PATH "./lib/mylib.so"
+unsigned int sToMs(unsigned int seconds) {
+    return seconds * 1000;
+}
 int main() {
   int run = 1;
   char c=0;
